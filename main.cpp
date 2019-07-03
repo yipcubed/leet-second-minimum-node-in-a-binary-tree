@@ -32,7 +32,7 @@ using namespace std;
 #pragma GCC optimise ("Ofast")
 
 // makes stdin not synced so it is faster. Just for LeetCode fun!
-static auto _no_sync_ = []() {              // NOLINT
+static auto _no_sync_ __attribute__((unused)) = []() {              // NOLINT
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     return nullptr;
@@ -78,7 +78,7 @@ void test1() {
     // [1,1,3,1,1,3,4,3,1,1,1,3,8,4,8,3,3,1,6,2,1]
     vector<int> v4{1,1,3,1,1,3,4,3,1,1,1,3,8,4,8,3,3,1,6,2,1};
     auto t4 = new TreeNode(v4);
-    / cout << t4 << endl;
+    // cout << t4 << endl;
     cout << "2 ? " << Solution().findSecondMinimumValue(t4) << endl;
 
 }
